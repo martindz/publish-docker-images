@@ -76,7 +76,7 @@ jobs:
       - name: Check for docker login
         id: check-login
         continue-on-error: true
-        uses: skills/action-keyphrase-checker@v1
+        uses: skills/action-keyphrase-checker@v2
         with:
           text-file: .github/workflows/docker-publish.yml
           keyphrase: "docker/login-action"
@@ -85,7 +85,7 @@ jobs:
       - name: Check for docker build
         id: check-build
         continue-on-error: true
-        uses: skills/action-keyphrase-checker@v1
+        uses: skills/action-keyphrase-checker@v2
         with:
           text-file: .github/workflows/docker-publish.yml
           keyphrase: "docker build"
@@ -95,7 +95,7 @@ jobs:
       - name: Check for docker push
         id: check-push
         continue-on-error: true
-        uses: skills/action-keyphrase-checker@v1
+        uses: skills/action-keyphrase-checker@v2
         with:
           text-file: .github/workflows/docker-publish.yml
           keyphrase: "docker push"
